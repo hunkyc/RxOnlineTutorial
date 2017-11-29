@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="7.2">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="OnlineTutorial"
+      id="298cc6f4-b7f7-4f92-ac32-5da4812629ae"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="OnlineTutorial"
+      id="298cc6f4-b7f7-4f92-ac32-5da4812629ae"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>
