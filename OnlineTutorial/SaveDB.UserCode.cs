@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace OnlineTutorial
 {
-    public partial class Recording1
+    public partial class SaveDB
     {
         /// <summary>
         /// This method gets called right after the recording has been started.

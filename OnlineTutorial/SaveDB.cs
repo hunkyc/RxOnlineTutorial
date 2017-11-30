@@ -24,29 +24,29 @@ namespace OnlineTutorial
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Recording1 recording.
+    ///The SaveDB recording.
     /// </summary>
-    [TestModule("5ef16dae-0ec3-43d7-a5eb-af6815b6a486", ModuleType.Recording, 1)]
-    public partial class Recording1 : ITestModule
+    [TestModule("99479f2a-9a4e-4522-a1a0-248492a85534", ModuleType.Recording, 1)]
+    public partial class SaveDB : ITestModule
     {
         /// <summary>
         /// Holds an instance of the OnlineTutorialRepository repository.
         /// </summary>
         public static OnlineTutorialRepository repo = OnlineTutorialRepository.Instance;
 
-        static Recording1 instance = new Recording1();
+        static SaveDB instance = new SaveDB();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Recording1()
+        public SaveDB()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Recording1 Instance
+        public static SaveDB Instance
         {
             get { return instance; }
         }
@@ -79,6 +79,10 @@ namespace OnlineTutorial
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'MainForm.Save' at 17;8.", repo.MainForm.SaveInfo, new RecordItemIndex(0));
+            repo.MainForm.Save.Click("17;8");
+            Delay.Milliseconds(200);
+            
         }
 
 #region Image Feature Data

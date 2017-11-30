@@ -2,10 +2,10 @@
 <recordtable
 embeddedrepository="False"
 id="5ef16dae-0ec3-43d7-a5eb-af6815b6a486"
-mode="Global"
+mode="Desktop"
 rxversion="7.2">
 	<name>
-		Recording1
+		StartSUT
 	</name>
 	<repeatcount>
 		1
@@ -23,12 +23,34 @@ rxversion="7.2">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Recording1"
+	classname="StartSUT"
 	namespace="OnlineTutorial">
 	</codegen>
 	<variables>
+		<var
+		id="ad967cff-0cb1-4ace-8835-e56794cd44aa"
+		name="varApplicationPath">
+			C:\Users\JMPSUser\Documents\Ranorex\RanorexStudio Projects\OnlineTutorial\OnlineTutorial\KeePass\KeePass.exe
+		</var>
 	</variables>
 	<recorditems>
+		<runapprecorditem
+		enabled="True"
+		maximized="False"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<filename>
+				C:\Users\JMPSUser\Documents\Ranorex\RanorexStudio Projects\OnlineTutorial\OnlineTutorial\KeePass\KeePass.exe
+			</filename>
+			<workingdir>
+				C:\Users\JMPSUser\Documents\Ranorex\RanorexStudio Projects\OnlineTutorial\OnlineTutorial\KeePass
+			</workingdir>
+			<args>
+			</args>
+		</runapprecorditem>
 	</recorditems>
 	<repository
 	id="2106933e-c625-4c37-8265-894c1141719d"
@@ -46,7 +68,7 @@ rxversion="7.2">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Recording1.UserCode.cs
+		StartSUT.UserCode.cs
 	</usercodefile>
 	<references>
 	</references>

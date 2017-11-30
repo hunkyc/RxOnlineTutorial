@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="99479f2a-9a4e-4522-a1a0-248492a85534"
+mode="Desktop"
+rxversion="7.2">
+	<name>
+		SaveDB
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="SaveDB"
+	namespace="OnlineTutorial">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="17;8"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="2cbfebd4-5c57-430a-af63-d8956ffda285"
+		sx="2386"
+		sy="319"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="91dd0099-f228-46a6-9caf-fceb89066f44"
+			sourcename="Recorder">
+				<element
+				capabilities="accessible"
+				dontcache="False"
+				enabled="True"
+				flavor="msaa"
+				hasfocus="True"
+				index="4"
+				prefcap="button"
+				rect="2369,311,23,22"
+				role="button"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="pressed"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Save
+					</attribute>
+					<attribute
+					name="accessibledefaultaction"
+					type="System.String">
+						Press
+					</attribute>
+					<attribute
+					name="accessiblename"
+					type="System.String">
+						Save
+					</attribute>
+					<attribute
+					name="accessiblerole"
+					type="System.Windows.Forms.AccessibleRole, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						PushButton
+					</attribute>
+					<attribute
+					name="accessiblestate"
+					type="System.Windows.Forms.AccessibleStates, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						Focused, HotTracked, Focusable
+					</attribute>
+					<attribute
+					name="accessiblevalue"
+					type="System.String">
+					</attribute>
+				</element>
+				<path>
+					/form[@controlname='MainForm']/?/?/button[@accessiblename='Save']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="d834fdac-7eb0-4eba-9bf7-d7711e602688">
+				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
+igCSiiigAooooAKKKKAP/9k=
+			</helperscreenshot>
+		</mouseitem>
+	</recorditems>
+	<repository
+	id="2106933e-c625-4c37-8265-894c1141719d"
+	name="OnlineTutorialRepository"
+	relativepath="OnlineTutorialRepository.rxrep"
+	rxversion="7.2">
+		<codegen
+		classname="OnlineTutorialRepository"
+		namespace="OnlineTutorial">
+		</codegen>
+		<rootfolder
+		id="aeacc831-8803-4a38-9cb3-f59c7ffc5e1e"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		SaveDB.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
