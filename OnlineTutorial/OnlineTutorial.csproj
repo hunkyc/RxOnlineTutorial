@@ -140,6 +140,18 @@
     <Compile Include="Program.cs">
       <id>73afecdf-9fa3-43b6-ba9a-dcc229651cc3</id>
     </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>04059d28-93f2-41c5-9512-e2c562994687</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>2f03d3ea-41ff-4588-8265-3e5711852122</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>04059d28-93f2-41c5-9512-e2c562994687</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d686e1c7-b93f-42fd-a13e-a49f9678b891</id>
+    </Compile>
     <Compile Include="StartSUT.cs">
       <BoundTo>886838be-3fbe-48d9-86cb-4792fe1fe47b</BoundTo>
       <DependentUpon>StartSUT.rxrec</DependentUpon>
@@ -175,6 +187,18 @@
       <DependentUpon>ValidateEntry.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>c387b542-d58d-4924-9bdc-b59bb7dc0375</id>
+    </Compile>
+    <Compile Include="ValidateVersionNumber.cs">
+      <BoundTo>7186b803-7091-49d4-a348-7b9478b4c7b6</BoundTo>
+      <DependentUpon>ValidateVersionNumber.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8acb32cf-2462-48ea-a5c4-66ddbf1e5811</id>
+    </Compile>
+    <Compile Include="ValidateVersionNumber.UserCode.cs">
+      <BoundTo>7186b803-7091-49d4-a348-7b9478b4c7b6</BoundTo>
+      <DependentUpon>ValidateVersionNumber.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>236c7fea-4319-48b8-86f9-2e2e9a1936ac</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +236,11 @@
       <repoid>2106933e-c625-4c37-8265-894c1141719d</repoid>
       <reporootid>aeacc831-8803-4a38-9cb3-f59c7ffc5e1e</reporootid>
     </None>
+    <None Include="Recording1.rxrec">
+      <id>04059d28-93f2-41c5-9512-e2c562994687</id>
+      <recordtableid>072b18d1-e5ee-4cd6-a18b-712008e80369</recordtableid>
+      <BoundTo>0673c7f4-ab13-41fd-81b5-29ebef531162</BoundTo>
+    </None>
     <None Include="StartSUT.rxrec">
       <BoundTo>0673c7f4-ab13-41fd-81b5-29ebef531162</BoundTo>
       <id>886838be-3fbe-48d9-86cb-4792fe1fe47b</id>
@@ -226,6 +255,11 @@
       <BoundTo>0673c7f4-ab13-41fd-81b5-29ebef531162</BoundTo>
       <id>fa3a4fdd-ff8a-4305-ba84-e12c3daa3a87</id>
       <recordtableid>14e60d4c-e1dc-4a40-b7e3-d9163d95e1d3</recordtableid>
+    </None>
+    <None Include="ValidateVersionNumber.rxrec">
+      <BoundTo>0673c7f4-ab13-41fd-81b5-29ebef531162</BoundTo>
+      <id>7186b803-7091-49d4-a348-7b9478b4c7b6</id>
+      <recordtableid>a495a69e-5013-4414-8502-601694dce42a</recordtableid>
     </None>
   </ItemGroup>
   <ItemGroup>

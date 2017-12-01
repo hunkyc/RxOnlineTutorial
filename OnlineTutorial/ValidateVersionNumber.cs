@@ -24,46 +24,46 @@ namespace OnlineTutorial
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Login recording.
+    ///The ValidateVersionNumber recording.
     /// </summary>
-    [TestModule("70eedcaf-8c12-4a35-b736-a2d8140a6c6a", ModuleType.Recording, 1)]
-    public partial class Login : ITestModule
+    [TestModule("a495a69e-5013-4414-8502-601694dce42a", ModuleType.Recording, 1)]
+    public partial class ValidateVersionNumber : ITestModule
     {
         /// <summary>
         /// Holds an instance of the OnlineTutorialRepository repository.
         /// </summary>
         public static OnlineTutorialRepository repo = OnlineTutorialRepository.Instance;
 
-        static Login instance = new Login();
+        static ValidateVersionNumber instance = new ValidateVersionNumber();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Login()
+        public ValidateVersionNumber()
         {
-            varMasterPassword = "rx";
+            verCurrentKeePassVersion = "2.20.1";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Login Instance
+        public static ValidateVersionNumber Instance
         {
             get { return instance; }
         }
 
 #region Variables
 
-        string _varMasterPassword;
+        string _verCurrentKeePassVersion;
 
         /// <summary>
-        /// Gets or sets the value of variable varMasterPassword.
+        /// Gets or sets the value of variable verCurrentKeePassVersion.
         /// </summary>
-        [TestVariable("d9d3b528-fb73-4604-b917-abc45df99464")]
-        public string varMasterPassword
+        [TestVariable("1ab0ab52-a39b-4fb3-adb8-701554a84cd5")]
+        public string verCurrentKeePassVersion
         {
-            get { return _varMasterPassword; }
-            set { _varMasterPassword = value; }
+            get { return _verCurrentKeePassVersion; }
+            set { _verCurrentKeePassVersion = value; }
         }
 
 #endregion
@@ -92,16 +92,20 @@ namespace OnlineTutorial
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeyPromptForm.Text' at 82;5.", repo.KeyPromptForm.TextInfo, new RecordItemIndex(0));
-            repo.KeyPromptForm.Text.Click("82;5");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'MainForm.MMenuMain' at 193;9.", repo.MainForm.MMenuMainInfo, new RecordItemIndex(0));
+            repo.MainForm.MMenuMain.Click("193;9");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varMasterPassword' with focus on 'KeyPromptForm.Text'.", repo.KeyPromptForm.TextInfo, new RecordItemIndex(1));
-            repo.KeyPromptForm.Text.PressKeys(varMasterPassword);
-            Delay.Milliseconds(0);
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeePass.AboutKeePass' at 73;8.", repo.KeePass.AboutKeePassInfo, new RecordItemIndex(1));
+            repo.KeePass.AboutKeePass.Click("73;8");
+            Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeyPromptForm.MBtnOK' at 45;10.", repo.KeyPromptForm.MBtnOKInfo, new RecordItemIndex(2));
-            repo.KeyPromptForm.MBtnOK.Click("45;10");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$verCurrentKeePassVersion) on item 'AboutForm.KeePassVersion'.", repo.AboutForm.KeePassVersionInfo, new RecordItemIndex(2));
+            Validate.Attribute(repo.AboutForm.KeePassVersionInfo, "Text", verCurrentKeePassVersion);
+            Delay.Milliseconds(100);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'AboutForm.MBtnOK' at 36;11.", repo.AboutForm.MBtnOKInfo, new RecordItemIndex(3));
+            repo.AboutForm.MBtnOK.Click("36;11");
             Delay.Milliseconds(200);
             
         }

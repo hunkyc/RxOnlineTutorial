@@ -27,6 +27,11 @@ rxversion="7.2">
 	namespace="OnlineTutorial">
 	</codegen>
 	<variables>
+		<var
+		id="d9d3b528-fb73-4604-b917-abc45df99464"
+		name="varMasterPassword">
+			rx
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -316,6 +321,10 @@ iigAxRiiigAxRiiigAxS4oooAKKKKAP/2Q==
 			<comment>
 			</comment>
 			<bindings>
+				<binding
+				target="KeySequence"
+				variable="varMasterPassword">
+				</binding>
 			</bindings>
 			<info
 			id="0d8aa588-b1b5-4276-a88b-53caeb057e7c"

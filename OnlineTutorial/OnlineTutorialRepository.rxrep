@@ -112,6 +112,16 @@ FYamxSTfAAAAAElFTkSuQmCC
 			searchtimeout="30000ms">
 				/form[@controlname='MainForm']/?/?/button[@accessiblename='Close']
 			</item>
+			<item
+			addcaps="menubar,control,nativewindow"
+			capname="menubar"
+			id="e03b60ba-d6c1-4de5-b540-279f8aed30a4"
+			name="MMenuMain"
+			refimgid="633a24f4-4bf7-4a62-96c7-dd4e7bcd210f"
+			refpath="/form[@controlname='MainForm']/menubar[@controlname='m_menuMain']"
+			searchtimeout="30000ms">
+				/form[@controlname='MainForm']/menubar[@controlname='m_menuMain']
+			</item>
 			<basepath>
 				/form[@controlname='MainForm']
 			</basepath>
@@ -171,6 +181,16 @@ FYamxSTfAAAAAElFTkSuQmCC
 			refimgid="e1f34f3e-cd9c-455c-ab7a-c2a4e830edd3"
 			searchtimeout="30000ms">
 				/contextmenu[@processname='KeePass']/menuitem[@accessiblename=$varExpires]
+			</item>
+			<item
+			addcaps="menuitem,accessible"
+			capname="menuitem"
+			id="25f8b33d-6a48-4a50-8b4e-6da017d7d3e4"
+			name="AboutKeePass"
+			refimgid="bec8e751-5c68-4a54-8c46-2473d1118ed5"
+			refpath="/contextmenu[@processname='KeePass']/menuitem[@accessiblename='About KeePass...']"
+			searchtimeout="30000ms">
+				/contextmenu[@processname='KeePass']/menuitem[@accessiblename='About KeePass...']
 			</item>
 			<basepath>
 				/contextmenu[@processname='KeePass']
@@ -383,6 +403,56 @@ FYamxSTfAAAAAElFTkSuQmCC
 			</item>
 			<basepath>
 				/form[@controlname='IconPickerForm']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAL+SURBVDhPfVJZSJRhFPXBXqbCNSMrG0MJKoKk
+l7INs03CVMRJM8WsNLfUKJeizRnHLbWiTStHKbQQ0pcylRYrx4XSskAsHyxn05lxNGfGWf7/9H3f
+mFBUBw7/w/+de+499zr9Ay6E1YRaQjthL2E04f+hUCgE5GPdtWs3r9cbeIuVh9nCw2jmIKur58g/
+XiQSlbHHf6KtrW29QCDgbTaON81wUOtsGFFZMThiQd/QDN4NmqGbtKPyWhVH3o3NyhygzlRst/OY
+mLJDpbUhNSMHy31WYtlyQh8/tPUY0dzxA12fzGh90cN5e3sPzMoZrNRZTxyURNzRNcTEb/p0eN1v
+gq/fWqwL2IYHzyZR3WxgHQVuCeKDg4P9qdiFzjxN5lSM2zA8aoX/qjUIj0pER58JLfJpPGzVwmuJ
+L24/NqCiXg+JTIdhhRVEa6QFqrU6Az86ZsPX7xYMDM9gKWm7vduAJ53TaHw+hbonk/Bc7IvjZ5pR
+UKNF3s1xdH40wdl5Hk8LaGnSQ98s+PBlBtl5ZUg/VYqkzBIkpBUjNqkYUYlFCIuTIiSmELk3xnGi
+XANprQ7hkXGsgJ2uqZ/MJR8wIfVkKY5mlCA+pRjRx4oQmVCE0ENS7DlQiB2REqRf1uBIoRppZRok
+p+ezAr1TRg5vSUvtJOnDaSWITXa4xmfVouCeFjujJNgeIUFgqBiJEjUOnlfieuMEVq8NYAWi78nq
+OZp206sfiKGuhx2uohQZa3lrmBgb94mxYW8BYs4pEZGrIOOaaYiUDLxGb8P9FkdY7l6+cFskhKun
+EC4eQix0F2KBmxDzXVcgnIgTxCo0NHfRy7zL1PQ8y69UcS/fG1FO1iSu0SH/1jiyKseQXKxG/CUV
+RGeVCMtRICR7lOVFZHPuDPQ8n7b3cN2fTWxNmRVjSCpSI+6iClFnlNh/WsEKUbG7hxcvl8vZEf0G
+ep6bNgfxdKWv+oy4cEeLo1I1rj7Ss5kbmljb+Kv4F2bP00iPJIzsOSktn59Nm7bsmHkOTk4/AWzH
+FYamxSTfAAAAAElFTkSuQmCC
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="36d6b4e7-798c-4153-9230-8199c2643594"
+		isrooted="True"
+		name="AboutForm"
+		refpath="/form[@controlname='AboutForm']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="cell"
+			capname="cell"
+			id="cf48ca2f-2204-42cf-9a86-f8f7ddbda6cc"
+			name="KeePassVersion"
+			refimgid="b46c2091-1126-4e2d-9b97-94e32687efa5"
+			searchtimeout="30000ms">
+				/form[@controlname='AboutForm']/table[@controlname='m_lvComponents']/?/?/cell[@columnindex='1' and @rowindex='1']
+			</item>
+			<item
+			addcaps="button,control,nativewindow"
+			capname="button"
+			id="63c3a890-25cb-4a6a-9d46-49bf7b97e28a"
+			name="MBtnOK"
+			refimgid="174ec494-e4d3-4683-bd65-68608701df3d"
+			refpath="/form[@controlname='AboutForm']/button[@controlname='m_btnOK']"
+			searchtimeout="30000ms">
+				/form[@controlname='AboutForm']/button[@controlname='m_btnOK']
+			</item>
+			<basepath>
+				/form[@controlname='AboutForm']
 			</basepath>
 			<icon>
 				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx

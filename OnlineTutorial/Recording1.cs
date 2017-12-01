@@ -24,47 +24,34 @@ namespace OnlineTutorial
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Login recording.
+    ///The Recording1 recording.
     /// </summary>
-    [TestModule("70eedcaf-8c12-4a35-b736-a2d8140a6c6a", ModuleType.Recording, 1)]
-    public partial class Login : ITestModule
+    [TestModule("072b18d1-e5ee-4cd6-a18b-712008e80369", ModuleType.Recording, 1)]
+    public partial class Recording1 : ITestModule
     {
         /// <summary>
         /// Holds an instance of the OnlineTutorialRepository repository.
         /// </summary>
         public static OnlineTutorialRepository repo = OnlineTutorialRepository.Instance;
 
-        static Login instance = new Login();
+        static Recording1 instance = new Recording1();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Login()
+        public Recording1()
         {
-            varMasterPassword = "rx";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Login Instance
+        public static Recording1 Instance
         {
             get { return instance; }
         }
 
 #region Variables
-
-        string _varMasterPassword;
-
-        /// <summary>
-        /// Gets or sets the value of variable varMasterPassword.
-        /// </summary>
-        [TestVariable("d9d3b528-fb73-4604-b917-abc45df99464")]
-        public string varMasterPassword
-        {
-            get { return _varMasterPassword; }
-            set { _varMasterPassword = value; }
-        }
 
 #endregion
 
@@ -92,18 +79,6 @@ namespace OnlineTutorial
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeyPromptForm.Text' at 82;5.", repo.KeyPromptForm.TextInfo, new RecordItemIndex(0));
-            repo.KeyPromptForm.Text.Click("82;5");
-            Delay.Milliseconds(200);
-            
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$varMasterPassword' with focus on 'KeyPromptForm.Text'.", repo.KeyPromptForm.TextInfo, new RecordItemIndex(1));
-            repo.KeyPromptForm.Text.PressKeys(varMasterPassword);
-            Delay.Milliseconds(0);
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'KeyPromptForm.MBtnOK' at 45;10.", repo.KeyPromptForm.MBtnOKInfo, new RecordItemIndex(2));
-            repo.KeyPromptForm.MBtnOK.Click("45;10");
-            Delay.Milliseconds(200);
-            
         }
 
 #region Image Feature Data

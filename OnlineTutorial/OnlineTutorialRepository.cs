@@ -32,6 +32,7 @@ namespace OnlineTutorial
         OnlineTutorialRepositoryFolders.KeePassAppFolder _keepass;
         OnlineTutorialRepositoryFolders.PwEntryFormAppFolder _pwentryform;
         OnlineTutorialRepositoryFolders.IconPickerFormAppFolder _iconpickerform;
+        OnlineTutorialRepositoryFolders.AboutFormAppFolder _aboutform;
 
         /// <summary>
         /// Gets the singleton class instance representing the OnlineTutorialRepository element repository.
@@ -53,6 +54,7 @@ namespace OnlineTutorial
             _keepass = new OnlineTutorialRepositoryFolders.KeePassAppFolder(this);
             _pwentryform = new OnlineTutorialRepositoryFolders.PwEntryFormAppFolder(this);
             _iconpickerform = new OnlineTutorialRepositoryFolders.IconPickerFormAppFolder(this);
+            _aboutform = new OnlineTutorialRepositoryFolders.AboutFormAppFolder(this);
         }
 
 #region Variables
@@ -150,6 +152,15 @@ namespace OnlineTutorial
         public virtual OnlineTutorialRepositoryFolders.IconPickerFormAppFolder IconPickerForm
         {
             get { return _iconpickerform; }
+        }
+
+        /// <summary>
+        /// The AboutForm folder.
+        /// </summary>
+        [RepositoryFolder("36d6b4e7-798c-4153-9230-8199c2643594")]
+        public virtual OnlineTutorialRepositoryFolders.AboutFormAppFolder AboutForm
+        {
+            get { return _aboutform; }
         }
     }
 
@@ -261,6 +272,7 @@ namespace OnlineTutorial
             RepoItemInfo _titleInfo;
             RepoItemInfo _saveInfo;
             RepoItemInfo _closeInfo;
+            RepoItemInfo _mmenumainInfo;
 
             /// <summary>
             /// Creates a new MainForm  folder.
@@ -272,6 +284,7 @@ namespace OnlineTutorial
                 _titleInfo = new RepoItemInfo(this, "Title", "container[@controlname='m_splitHorizontal']/?/?/container[@controlname='m_splitVertical']/?/?/table[@controlname='m_lvEntries']/?/?/cell[@text=$varTitle]", 30000, null, "2a4dee95-857d-4ead-bb63-d535133f779f");
                 _saveInfo = new RepoItemInfo(this, "Save", "?/?/button[@accessiblename='Save']", 30000, null, "91dd0099-f228-46a6-9caf-fceb89066f44");
                 _closeInfo = new RepoItemInfo(this, "Close", "?/?/button[@accessiblename='Close']", 30000, null, "1530511b-6e75-44e7-b7ff-e5181bab7fc9");
+                _mmenumainInfo = new RepoItemInfo(this, "MMenuMain", "menubar[@controlname='m_menuMain']", 30000, null, "e03b60ba-d6c1-4de5-b540-279f8aed30a4");
             }
 
             /// <summary>
@@ -393,6 +406,30 @@ namespace OnlineTutorial
                     return _closeInfo;
                 }
             }
+
+            /// <summary>
+            /// The MMenuMain item.
+            /// </summary>
+            [RepositoryItem("e03b60ba-d6c1-4de5-b540-279f8aed30a4")]
+            public virtual Ranorex.MenuBar MMenuMain
+            {
+                get
+                {
+                    return _mmenumainInfo.CreateAdapter<Ranorex.MenuBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MMenuMain item info.
+            /// </summary>
+            [RepositoryItemInfo("e03b60ba-d6c1-4de5-b540-279f8aed30a4")]
+            public virtual RepoItemInfo MMenuMainInfo
+            {
+                get
+                {
+                    return _mmenumainInfo;
+                }
+            }
         }
 
         /// <summary>
@@ -404,6 +441,7 @@ namespace OnlineTutorial
             RepoItemInfo _addentryInfo;
             RepoItemInfo _selectallInfo;
             RepoItemInfo _mi_expiresInfo;
+            RepoItemInfo _aboutkeepassInfo;
 
             /// <summary>
             /// Creates a new KeePass  folder.
@@ -414,6 +452,7 @@ namespace OnlineTutorial
                 _addentryInfo = new RepoItemInfo(this, "AddEntry", "menuitem[@accessiblename='Add Entry...']", 30000, null, "d0d212ef-7a31-4de5-a6d4-5209c423533c");
                 _selectallInfo = new RepoItemInfo(this, "SelectAll", "?/?/menuitem[@accessiblename='Select All']", 30000, null, "27edf750-ed06-48d7-b3be-4a7cfd78bc92");
                 _mi_expiresInfo = new RepoItemInfo(this, "MI_Expires", "menuitem[@accessiblename=$varExpires]", 30000, null, "971f989e-5172-4d5d-ae16-9118b2b07829");
+                _aboutkeepassInfo = new RepoItemInfo(this, "AboutKeePass", "menuitem[@accessiblename='About KeePass...']", 30000, null, "25f8b33d-6a48-4a50-8b4e-6da017d7d3e4");
             }
 
             /// <summary>
@@ -509,6 +548,30 @@ namespace OnlineTutorial
                 get
                 {
                     return _mi_expiresInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AboutKeePass item.
+            /// </summary>
+            [RepositoryItem("25f8b33d-6a48-4a50-8b4e-6da017d7d3e4")]
+            public virtual Ranorex.MenuItem AboutKeePass
+            {
+                get
+                {
+                    return _aboutkeepassInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AboutKeePass item info.
+            /// </summary>
+            [RepositoryItemInfo("25f8b33d-6a48-4a50-8b4e-6da017d7d3e4")]
+            public virtual RepoItemInfo AboutKeePassInfo
+            {
+                get
+                {
+                    return _aboutkeepassInfo;
                 }
             }
         }
@@ -895,6 +958,98 @@ namespace OnlineTutorial
             /// The MBtnOK item info.
             /// </summary>
             [RepositoryItemInfo("a8dddacb-cdbd-4072-a9de-8e441bb0f3c5")]
+            public virtual RepoItemInfo MBtnOKInfo
+            {
+                get
+                {
+                    return _mbtnokInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The AboutFormAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("36d6b4e7-798c-4153-9230-8199c2643594")]
+        public partial class AboutFormAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _keepassversionInfo;
+            RepoItemInfo _mbtnokInfo;
+
+            /// <summary>
+            /// Creates a new AboutForm  folder.
+            /// </summary>
+            public AboutFormAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("AboutForm", "/form[@controlname='AboutForm']", parentFolder, 30000, null, true, "36d6b4e7-798c-4153-9230-8199c2643594", "")
+            {
+                _keepassversionInfo = new RepoItemInfo(this, "KeePassVersion", "table[@controlname='m_lvComponents']/?/?/cell[@columnindex='1' and @rowindex='1']", 30000, null, "cf48ca2f-2204-42cf-9a86-f8f7ddbda6cc");
+                _mbtnokInfo = new RepoItemInfo(this, "MBtnOK", "button[@controlname='m_btnOK']", 30000, null, "63c3a890-25cb-4a6a-9d46-49bf7b97e28a");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("36d6b4e7-798c-4153-9230-8199c2643594")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("36d6b4e7-798c-4153-9230-8199c2643594")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The KeePassVersion item.
+            /// </summary>
+            [RepositoryItem("cf48ca2f-2204-42cf-9a86-f8f7ddbda6cc")]
+            public virtual Ranorex.Cell KeePassVersion
+            {
+                get
+                {
+                    return _keepassversionInfo.CreateAdapter<Ranorex.Cell>(true);
+                }
+            }
+
+            /// <summary>
+            /// The KeePassVersion item info.
+            /// </summary>
+            [RepositoryItemInfo("cf48ca2f-2204-42cf-9a86-f8f7ddbda6cc")]
+            public virtual RepoItemInfo KeePassVersionInfo
+            {
+                get
+                {
+                    return _keepassversionInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MBtnOK item.
+            /// </summary>
+            [RepositoryItem("63c3a890-25cb-4a6a-9d46-49bf7b97e28a")]
+            public virtual Ranorex.Button MBtnOK
+            {
+                get
+                {
+                    return _mbtnokInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MBtnOK item info.
+            /// </summary>
+            [RepositoryItemInfo("63c3a890-25cb-4a6a-9d46-49bf7b97e28a")]
             public virtual RepoItemInfo MBtnOKInfo
             {
                 get

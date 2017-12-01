@@ -3,6 +3,19 @@
 rxversion="7.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
+			<modulegroup
+			id="02c9ef4a-8255-4cca-a131-81a310db92d4"
+			name="StartAndLogin"
+			ref="5e8939ed-1201-4a86-aadb-fcdc1d51cbe4">
+				<databinding>
+					<var
+					dataname="GlobalExecutionPath"
+					datasourceid="0aefdb24-8d9d-4afd-9e13-ea78884047c3"
+					variableid="7059d292-1a16-4889-b9a1-3b1bf2ae4b74"
+					variablename="ModuleGroup1GlobalExecutionPath">
+					</var>
+				</databinding>
+			</modulegroup>
 			<testmodule
 			id="04b743e9-0b09-4a74-88d4-214d14f25f36"
 			name="SaveDB"
@@ -17,6 +30,10 @@ rxversion="7.2">
 					<param
 					name="GlobalExecutionPath"
 					value="C:\Users\JMPSUser\Documents\Ranorex\RanorexStudio Projects\OnlineTutorial\OnlineTutorial\KeePass\KeePass.exe">
+					</param>
+					<param
+					name="GlobalCurrentKeePassVersion"
+					value="2.20.1">
 					</param>
 				</parameters>
 			</testcase>
@@ -64,20 +81,21 @@ rxversion="7.2">
 					</var>
 				</databinding>
 			</testmodule>
+			<modulegroup
+			id="405ae8b6-9e0e-4fb4-a711-5b0a8c644cdc"
+			name="SaveAndClose"
+			ref="33e33f70-7a79-48c5-88e6-eacb29109147">
+			</modulegroup>
 			<testmodule
-			id="70b0d81c-cd50-42ea-89d3-ddc5cc8ba8ae"
-			name="StartSUT"
-			ref="5ef16dae-0ec3-43d7-a5eb-af6815b6a486"
+			id="4ab779d1-d048-4a88-84f3-1d56d0d095a8"
+			name="Login"
+			ref="70eedcaf-8c12-4a35-b736-a2d8140a6c6a"
 			type="Recording">
-				<databinding>
-					<var
-					dataname="GlobalExecutionPath"
-					datasourceid="0aefdb24-8d9d-4afd-9e13-ea78884047c3"
-					variableid="ad967cff-0cb1-4ace-8835-e56794cd44aa"
-					variablename="varApplicationPath">
-					</var>
-				</databinding>
 			</testmodule>
+			<testcase
+			id="6684432e-e661-4fdf-8bbb-3c6994eec994"
+			name="TC_ValidateVersionNumber">
+			</testcase>
 			<testmodule
 			id="727464d3-90af-477f-ba4a-8e2a81817bde"
 			name="DeleteEntry"
@@ -89,6 +107,20 @@ rxversion="7.2">
 					datasourceid="54556c44-ebfd-4e6a-9b5e-8298a1c817c9"
 					variableid="5acfdcff-9910-4154-a590-d69ed4ffb763"
 					variablename="varTitle">
+					</var>
+				</databinding>
+			</testmodule>
+			<testmodule
+			id="a0720777-d37c-4e65-9ea4-4f51464b4344"
+			name="StartSUT"
+			ref="5ef16dae-0ec3-43d7-a5eb-af6815b6a486"
+			type="Recording">
+				<databinding>
+					<var
+					dataname="GlobalExecutionPath"
+					datasourceid="0aefdb24-8d9d-4afd-9e13-ea78884047c3"
+					variableid="ad967cff-0cb1-4ace-8835-e56794cd44aa"
+					variablename="varApplicationPath">
 					</var>
 				</databinding>
 			</testmodule>
@@ -111,12 +143,6 @@ rxversion="7.2">
 					</var>
 				</databinding>
 			</testmodule>
-			<testmodule
-			id="ce849420-3f7e-401c-8cea-0c1d9e3d96cf"
-			name="Login"
-			ref="70eedcaf-8c12-4a35-b736-a2d8140a6c6a"
-			type="Recording">
-			</testmodule>
 			<testsuite
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
@@ -131,6 +157,20 @@ rxversion="7.2">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
+			<testmodule
+			id="eaa75ac4-6375-44aa-9ca0-689db276414e"
+			name="ValidateVersionNumber"
+			ref="a495a69e-5013-4414-8502-601694dce42a"
+			type="Recording">
+				<databinding>
+					<var
+					dataname="GlobalCurrentKeePassVersion"
+					datasourceid="0aefdb24-8d9d-4afd-9e13-ea78884047c3"
+					variableid="1ab0ab52-a39b-4fb3-adb8-701554a84cd5"
+					variablename="verCurrentKeePassVersion">
+					</var>
+				</databinding>
+			</testmodule>
 			<testmodule
 			id="f31f2c92-b392-4041-b155-fcbd35e42567"
 			name="CloseSUT"
@@ -148,14 +188,10 @@ rxversion="7.2">
 					<testcase
 					id="a08668fb-536d-4366-8d96-d54d63ea86bf"
 					name="TestCase">
-						<testmodule
-						id="70b0d81c-cd50-42ea-89d3-ddc5cc8ba8ae"
-						name="StartSUT">
-						</testmodule>
-						<testmodule
-						id="ce849420-3f7e-401c-8cea-0c1d9e3d96cf"
-						name="Login">
-						</testmodule>
+						<modulegroup
+						id="02c9ef4a-8255-4cca-a131-81a310db92d4"
+						name="StartAndLogin">
+						</modulegroup>
 						<testmodule
 						id="2a340007-8d2a-4252-8d48-234293ad93ec"
 						name="AddEntry">
@@ -176,6 +212,26 @@ rxversion="7.2">
 						id="f31f2c92-b392-4041-b155-fcbd35e42567"
 						name="CloseSUT">
 						</testmodule>
+					</testcase>
+					<testcase
+					id="6684432e-e661-4fdf-8bbb-3c6994eec994"
+					name="TC_ValidateVersionNumber">
+						<testmodule
+						id="a0720777-d37c-4e65-9ea4-4f51464b4344"
+						name="StartSUT">
+						</testmodule>
+						<testmodule
+						id="4ab779d1-d048-4a88-84f3-1d56d0d095a8"
+						name="Login">
+						</testmodule>
+						<testmodule
+						id="eaa75ac4-6375-44aa-9ca0-689db276414e"
+						name="ValidateVersionNumber">
+						</testmodule>
+						<modulegroup
+						id="405ae8b6-9e0e-4fb4-a711-5b0a8c644cdc"
+						name="SaveAndClose">
+						</modulegroup>
 					</testcase>
 				</testcase>
 			</testsuite>
@@ -223,7 +279,7 @@ rxversion="7.2">
 			id="0aefdb24-8d9d-4afd-9e13-ea78884047c3">
 			</testcontainer>
 			<testcontainer
-			id="a08668fb-536d-4366-8d96-d54d63ea86bf">
+			id="6684432e-e661-4fdf-8bbb-3c6994eec994">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
